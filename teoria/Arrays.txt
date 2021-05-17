@@ -1,0 +1,78 @@
+A veces  imposible saber de antemano la cantidad de datos que
+un programa procesara.
+Dimensionar arrays es poco practico y expuesto a errores.
+
+Reservar memoria asi, sin saber el tamaño de los objetos
+a procesar, puede fallar un cualquier momento.
+
+Usando punteros, podemos alocar memoria minima y despues,
+a medida q se necesitan, se crean objetos dinamicamente
+y se asignan a punteros conocidos.
+
+Los arrays de punteros usan mucha menos memoria que un array
+de objetos.
+
+Ejemplo, la clase cylinder que definimos antes:
+
+#ifndef CYLINDER_H
+#define CYLINDER_H
+
+using namespace std;
+
+const double pi = 3.14159;
+
+class cylinder : public container
+{
+public:
+	double radius, length;
+	cylinder() {}
+	double volume() { return pi * radius * radius * length; }
+	std::string toJSON()
+{
+		std::string s;
+		s.append(container::toJSON());
+		s.append(",\"cylinder\": {\"radius\": \"");
+		s.append(to_string(radius));
+		s.append("\", \"length\": \"");
+		s.append(to_string(length));
+		s.append("\"}");
+		return s;
+	}
+	std::string toXML()
+	{
+		std::string s;
+		s.append("<cylinder>");
+		s.append(container::toXML());
+		s.append("<radius>");
+		s.append(to_string(radius));
+		s.append("</radius>");
+		s.append("<length>");
+		s.append(to_string(length));
+		s.append("</length>");
+		s.append("</cylinder>");
+		return s;
+	}
+};
+
+#endif
+
+
+Si queremos definir un array de objetos de esta clase, por ejemplo
+de 100 objetos:
+	cylinder tanques[100];
+Del mismo modo, si queremos definir un array de punteros a cylinder,
+	cylinder *tanques_ptrs[100];
+
+El asterisco define que estamos declarando punteros y no objetos
+y ademas, el astericos tiene precedencia sobre los [] que
+definen el tamaño del array.
+
+Como referenciamos elementos de un array de punteros:
+	*tanques_ptrs[7]
+se refiere al octavo elemento del array de punteros.
+Para referirnos a miembros de dicho elemento:
+	(*tanques_ptrs[7]).radius
+o bien:
+	tanques_ptrs[7]->radius
+
+

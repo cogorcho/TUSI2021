@@ -1,0 +1,47 @@
+TEORIA:
+
+# ------------------------------------------------
+# Como diseñar clases y jerarquias de clases.
+# ------------------------------------------------
+
+Lo q se da a continuacion no es imperativo, sin
+embargo, hay q tener buenas razones para no seguir
+estas directicas (o recomendaciones)
+
+Principio de representacion explicita:
+    Siempre q haya una categoria de algo que nuestro
+    programa necesite representar, debe haber una clase
+    que lo represente.
+
+Principio de no duplicacion:
+    La declaracion de variables y funciones miembro debe
+    distribuirse entre la definicion de las clases asegurandose
+    que no haya duplicacion de codigo identico.
+
+Principio de vista local:
+    Cuando los elementos de un programa que  pueden ubicarse cercanos 
+    en la pantalla, uno puede ver a golpe de vista como se relacionan
+    entre si. 
+    De no poder verse, uno termina adivinando las relaciones.
+
+Principio de busqueda:
+    Un programa debe ser capaz de buscar valores en lugar de tener
+    que ejecutar un proceso para obtenerlos.
+
+Principio de necesidad de saber:
+    Al diseñar clases que vayan a ser usadas por otros programadores,
+    estas tendran mas variables y funciones miembro de las que otros
+    vayan a usar.
+    Restringir el acceso a funciones y variables que no formen parte
+    de la interface publica de nuestra clase, esta siempre puede ser mejorada
+    o modificada, pero si se mantiene la interface publica, no habra 
+    consecuencias en donde se use nuestra clase.
+
+Principio de mantenerlo simple:
+    Siempre. Clases con funciones largas y complejas se hacen dificiles
+    de mantener, debuguear, mejorar, etc.
+
+Principo de modularidad:
+    Division de un programa en modulos coherentes logicamente.
+    En C++, separar la declaracion de la clase (.h) de la implementacion
+    de las funciones (.cpp)

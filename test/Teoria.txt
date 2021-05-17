@@ -1,0 +1,76 @@
+--------------------------------------
+1. Como testear numeros en c++
+--------------------------------------
+
+Operadores:
+==, != , >, <, >=, <=
+
+Operador not: !
+
+En C++ cualquier entero != 0 ES TRUE.
+
+Un predicado es una funcion que devuelve 0 o 1
+0 es False, 1 es True.
+
+cast (tipo)
+
+Ejemplo;
+#include <iostream>
+using namespace std;
+
+int main() {
+	int i = 50;
+	double d = 50.0;
+	double d2 = 50.10;
+	cout << (int)d2 << ", " << d2 << " trunca!" << endl;
+
+	cout << "i == (int)d    es " << (i == (int)d) << endl;
+	cout << "(double)i != d es " << ((double)i != d ) << endl;
+	cout << "i > (int)d     es " << (i > (int)d) << endl;
+	cout << "(double)i < d  es " << ((double)i < d ) << endl;
+	cout << "i >= (int)d    es " << (i >= (int)d) << endl;
+	cout << "(double)i <= d es " << ((double)i <= d ) << endl;
+}
+
+--------------------------------------
+2. Operaciones condicionales
+--------------------------------------
+Expresiones booleanas
+
+if else
+
+Operador ternario:
+
+(Expresion booleana) ? if true : else
+
+Combinacion de expresiones booleanas:
+
+&& and
+|| or
+Estos dos operadores evaluan el operando de la izquierda
+primero y despues el de la derecha.
+
+En un AND, si el 1er operando es false, no se evalua el 2do.
+En un OR, si el 1er operando es true, no se evalue al 2do.
+
+if (f1() && f2() && f3() ....)
+if (f1() || f2())
+
+
+--------------------------------------
+3. Operaciones de iteracion
+--------------------------------------
+while for ++ --
+
+while(true): Loop infinito
+for(int c =1; c < 10; c++)
+for(;;)
+do {
+
+} while()
+
+--------------------------------------
+4. Archivos
+--------------------------------------
+
+

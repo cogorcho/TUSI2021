@@ -1,0 +1,10 @@
+{'box_car': {
+"railroad_car": {"year_buit": "2000", "age": "21"},"container": {"percentage_loaded": "80"}, "volume": "1157.625000"}}
+{'box_car': {
+"railroad_car": {"year_buit": "2000", "age": "21"},"container": {"percentage_loaded": "80"}, "volume": "140.608000"}}
+{'box_car': {
+"railroad_car": {"year_buit": "2000", "age": "21"},"container": {"percentage_loaded": "80"}, "volume": "761.048497"}}
+{'box_car': {
+"railroad_car": {"year_buit": "2000", "age": "21"},"container": {"percentage_loaded": "80"}, "volume": "1103.359693"}}
+{'box_car': {
+"railroad_car": {"year_buit": "2000", "age": "21"},"container": {"percentage_loaded": "80"}, "volume": "8000.000000"}}
